@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="stylecode.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Group 3</title>
+    <style>
+        body {
+            font-family: 'Crete Round', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #000000;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0; /* Added to remove default padding */
+            margin: 0;  /* Added to remove default margin */
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #hero-image {
+            background: url('file:///C:/Users/Marianne%20Abigail/Downloads/6ea476380aafb86d4f43caaada948ee4.gif') no-repeat center center/cover;
+            height: 500px;
+            position: relative;
+            color: white;
+        }
+        #hero-image h2 {
+            font-size: 3rem;
+        }
+        #hero-image .wrapper {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+        #features {
+            padding: 50px 0;
+            background-color: #000000;
+        }
+        #features ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0; /* Added to remove default padding */
+            margin: 0;  /* Added to remove default margin */
+        }
+        #features ul li {
+            flex: 1;
+            text-align: center;
+        }
+        #primary-content, #secondary-content {
+            padding: 50px 0;
+        }
+        #cta {
+            background: #000000;
+            color: white;
+            padding: 50px 0;
+        }
+        footer {
+            background: #000000;
+            color: white;
+            padding: 20px 0;
+        }
+        .clear {
+            clear: both;
+        }
+
+        /* Rain Effect */
+        .rain-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .raindrop {
+            position: absolute;
+            top: -20px;
+            width: 2px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            animation: fall 2s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Random raindrops generation */
+        .raindrop:nth-child(odd) {
+            animation-duration: 1.5s;
+        }
+        .raindrop:nth-child(even) {
+            animation-duration: 2.5s;
+        }
+
+        /* Swiper Styles */
+        .swiper-container {
+            width: 50%;
+            height: 200px; /* Adjust height for profile cards */
+            margin-top: 20px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #d2dfd0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px; /* Added padding */
+            text-align: center;
+            height: 100%; /* Full height */
+        }
+        .profile-image {
+            width: 60px; /* Profile image size */
+            height: 60px; /* Profile image size */
+            border-radius: 50%; /* Circular profile image */
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+
+<header>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Group 3</a></li>
+                <li><a href="#">Computer-9</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Information</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="hero-image">
+    <div class="wrapper">
+        <h2><strong>Typhoon Enteng</strong><br/>Stay Resilient.</h2>
+    </div>
+    <div class="rain-container">
+        <!-- Raindrops will be added dynamically here -->
+    </div>
+</div>
+
+<div id="features">
+    <div class="wrapper">
+        <ul>
+            <li class="feature-1">
+                <h4>News</h4>
+                <p>Typhoon Enteng, also known as Tropical Storm Yagi, recently devastated the Philippines with heavy rainfall, flooding, and landslides, resulting in significant damage and loss of life. The storm's impact highlights the increasing threat of extreme weather events in the country, which are exacerbated by climate change.</p>
+            </li>
+            <li class="feature-2">
+                <h4>Report</h4>
+                <p>Typhoon Enteng was a tropical cyclone that affected the Philippines and other nearby areas. The typhoon hit the Philippines Area of Responsibility(PAR) on September 1-4, 2024 and brought heavy rains and flooding, disrupting transportation and agricultural activities. According to the Department of Agriculture (DA), the affected regions included the Ilocos Region, Cagayan Valley, Central Luzon, CALABARZON, Bicol, Western Visayas, and Eastern Visayas.</p>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="primary-content">
+    <div class="wrapper">
+        <article>
+            <h3>Stay Informed</h3>
+            <p>To stay informed about Typhoon Enteng, it's essential to regularly check reliable sources such as the Philippine Atmospheric, Geophysical and Astronomical Services Administration (PAGASA) for updates on storm developments and warnings. Following local news outlets and their social media channels can provide timely information on affected areas and safety measures. Engaging with community alerts and emergency services via mobile apps can also enhance awareness. Additionally, listening to radio broadcasts during severe weather can offer real-time updates, ensuring you stay informed and prepared throughout the typhoon's course.</p>
+            <a href="#"><img src="file:///C:/Users/Marianne%20Abigail/Downloads/enteng-satellite-september-2-2024-11am.png" alt="video placeholder"></a>
+        </article>
+    </div>
+</div>
+
+<div id="secondary-content">
+    <div class="wrapper">
+        <article style="background-image: url('file:///C:/Users/Marianne%20Abigail/Downloads/cyclone-sea_948023-157.png');">
+            <div class="overlay">
+                <h4>More Reports</h4>
+                <p><small>learn more</small></p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="cta">
+    <div class="wrapper">
+        <h3>Stay Safe and Godbless</h3>
+    </div>
+</div>
+
+<!-- Swiper Section for Profile Cards -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Profile Card 1 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/456250593_1878789269286386_9012234857685466810_n.jpg" alt="Profile 1">
+            <h4>Sofie Romano</h4>
+            <p>Group Leader</p>
+        </div>
+        <!-- Profile Card 2 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/135922498_417406626234038_2471672273258067742_n.jpg" alt="Profile 2">
+            <h4>Angella Rosete</h4>
+            <p>Researcher</p>
+        </div>
+        <!-- Profile Card 3 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/383346490_1761149777676143_2392950148408460222_n.jpg" alt="Profile 3">
+            <h4>Jianne Penaflor</h4>
+            <p>Researcher</p>
+        </div>
+        <!-- Profile Card 4 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/412387295_1125907705484728_443374437926378637_n.jpg" alt="Profile 4">
+            <h4>Anna Mikaela</h4>
+            <p>Researcher</p>
+        </div>
+        <!-- Profile Card 5 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/451291818_1223526602109773_7742943815171463257_n.jpg" alt="Profile 5">
+            <h4>Don Malihan</h4>
+            <p>Coder</p>
+        </div>
+        <!-- Profile Card 6 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/26165602_724745741056801_6753303814719473299_n.jpg" alt="Profile 6">
+            <h4>Jared Mendoza</h4>
+            <p>Coder</p>
+        </div>
+        <!-- Profile Card 7 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/461418098_551102067315386_2280718897496857426_n.jpg" alt="Profile 7">
+            <h4>Jalen Mogatar</h4>
+            <p>Image Provider</p>
+        </div>
+        <!-- Profile Card 8 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/461106391_3465369983761643_5998126567906862044_n.jpg" alt="Profile 8">
+            <h4>Abdulhakim Mala</h4>
+            <p>Image Provider</p>
+        </div>
+        <!-- Profile Card 9 -->
+        <div class="swiper-slide">
+            <img class="profile-image" src="file:///C:/Users/Marianne%20Abigail/Downloads/457068798_516876620748128_6721662567639419088_n.jpg" alt="Profile 9">
+            <h4>Cedrick Perez</h4>
+            <p>Image Provider</p>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<footer>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p>Group 3 2024-2025</p>
+            <p><a href="#">Terms of Services</a> | <a href="#">Privacy</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Adjust number of cards visible at once
+        spaceBetween: 10,  // Space between cards
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    // Generate raindrops
+    function createRain() {
+        const rainContainer = document.querySelector('.rain-container');
+        for (let i = 0; i < 100; i++) {
+            let raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = Math.random() * 100 + 'vw';
+            raindrop.style.animationDelay = Math.random() * 2 + 's';
+            rainContainer.appendChild(raindrop);
+        }
+    }
+    
+    createRain();
+</script>
+</body>
+</html>
